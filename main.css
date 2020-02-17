@@ -1,0 +1,22 @@
+.quiz_section{
+    display: none;
+}
+.question_form{
+    width: 400px;
+    margin: 0 auto;
+}
+
+.choice{
+}
+
+.alert{
+    display: none;
+}
+
+#next{
+    display: none;
+}
+
+#counter{
+    display: none;
+}
