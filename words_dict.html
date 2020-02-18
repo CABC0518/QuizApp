@@ -4,7 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/word_dict.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="js/words.json"></script>
@@ -34,12 +35,12 @@
             </div>
           </nav>
       </header>
+      <button id="page_top" class="btn btn-primary">Page Top</button>
       <div class="container">
         <h1>Word Dictionary</h1>
         <label for="Search word">Search Word:</label>
-        <input type="text" name="" id="search">
-        <div id="search_result" style="height: 80px;">
-
+        <input type="text" name="" class="ml-1" id="search">
+        <div id="search_not_found">
         </div>
         <div>
             <table class="table table-striped">
