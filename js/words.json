@@ -1,4 +1,4 @@
-[
+let words_list = [
 {"fin_word": null, "eng_word": null},
 {"fin_word": "kuin", "eng_word": "as"},
 {"fin_word": "minä", "eng_word": "I"},
