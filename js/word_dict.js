@@ -1,4 +1,5 @@
 
+
 for (let i = 1; i < words_list.length -1; i++) {
     let tr = document.createElement('tr');
 
@@ -23,7 +24,7 @@ for (let i = 1; i < words_list.length -1; i++) {
 
     let tbody = document.getElementById("words_list")
     tbody.appendChild(tr)
-    
+
 }
 
 // event handler for Word Search Box
