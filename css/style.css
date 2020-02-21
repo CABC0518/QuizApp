@@ -18,7 +18,7 @@
   display: none;
 }
 
-.choises{
+.choices{
   width: 80%;
 }
 
@@ -28,4 +28,14 @@
 
 .correct{
   display: none;
+}
+
+.quiz_box{
+  background-color: rgba(117, 168, 250, 0.3);
+}
+
+.quiz_desc{
+  height: auto;
+  width: auto;
+  background-color: rgba(117, 168, 250, 0.3);
 }

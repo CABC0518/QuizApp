@@ -54,6 +54,7 @@ document.getElementById('counter').innerHTML = counter + " out of " + quiz_count
 
 document.getElementById('start_btn').addEventListener('click', () => {
   document.getElementById('start_box').style.display = "none";
+  document.getElementById('quiz_desc').style.display = "none";
   document.getElementById('quiz_box').style.display = "block";
   makeQuestion()
 })
