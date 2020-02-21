@@ -15,8 +15,17 @@
   border: 1px solid black;
   width: auto;
   height: 400px;
+  display: none;
 }
 
 .choises{
   width: 80%;
+}
+
+.incorrect{
+  display: none;
+}
+
+.correct{
+  display: none;
 }
