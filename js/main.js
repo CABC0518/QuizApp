@@ -44,6 +44,8 @@ function makeQuestion() {
   let question_word = document.createTextNode(choices_answer_arr[1].eng_word)
   document.getElementById('question_word').appendChild(question_word)
   localStorage.setItem('answer_word', choices_answer_arr[1].fin_word);
+  let word_set = "word_set_" + quiz_count
+  localStorage.setItem(word_set, JSON.stringify(choices_answer_arr));
 }
 
 let quiz_count = 0;
