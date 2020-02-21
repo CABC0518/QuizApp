@@ -21,7 +21,18 @@ function getQuestion(){
   return [choices, answer_word]
 }
 
+function refreshQuiz(){
+  let question = document.getElementById("question_word")
+  question.textContent = ""
+  // refresh choices
+  els = document.getElementsByClassName("choices")
+  for(el of els){
+    el.textContent = "";
+  }
+}
+
 function makeQuestion(){
+  refreshQuiz()
   let choices_answer_arr = getQuestion()
   console.log(choices_answer_arr)
   let choices_cls = document.getElementsByClassName("choices");
@@ -37,34 +48,53 @@ function makeQuestion(){
   localStorage.setItem('answer_word', choices_answer_arr[1].fin_word);
 }
 
-let quiz_count;
-let num_of_correct_answer;
+let quiz_count = 0;
+let counter = 0;
+document.getElementById('counter').innerHTML = counter + " out of " + quiz_count + " questions are correct"
 
 document.getElementById('start_btn').addEventListener('click', ()=>{
-  quiz_count = 1
-  num_of_correct_answer = 0
   document.getElementById('start_box').style.display = "none";
   document.getElementById('quiz_box').style.display = "block";
   makeQuestion()
-
 })
+
 
 let choices_cls = document.getElementsByClassName("choices");
 console.log(choices_cls)
 for(let i = 0; i < choices_cls.length; i++){
   choices_cls[i].addEventListener("click", ()=>{
+      quiz_count++
+      console.log(quiz_count)
       let answer_word = localStorage.getItem("answer_word");
-      document.getElementById('correct').style.display = "none";
-      document.getElementById('incorrect').style.display = "none";
+      msgSetNone()
+      // when asnwer is correct
       if(choices_cls[i].textContent == answer_word){
         console.log("User Input: ",choices_cls[i].textContent)
         document.getElementById('correct').style.display = "block";
+        counter++
+        console.log(counter)
         console.log("correct!")
+      // when asnwer is incorrect
       }else{
         console.log("User Input: ",choices_cls[i].textContent)
         document.getElementById('incorrect').style.display = "block";
       }
+      setTimeout(()=>{
+        if(quiz_count === 10){
+          
+        }
+         makeQuestion()
+         document.getElementById('counter').innerHTML = counter + " out of " + quiz_count + " questions are correct"
+         msgSetNone()
+       }, 1000);
+
   })
+
+}
+
+function msgSetNone(){
+  document.getElementById('correct').style.display = "none";
+  document.getElementById('incorrect').style.display = "none";
 }
 
 // function checkAnsewr(answer){
