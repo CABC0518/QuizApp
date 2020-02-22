@@ -1,44 +1,85 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="js/words.json"></script>
-    <title>Quiz App</title>
-  </head>
-  <body>
-      <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="words_dict.html">Words</a>
-                </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
-            </div>
-          </nav>
-      </header>
-    <h1>Quiz App</h1>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="js/words.json"></script>
+  <title>Quiz App</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="words_dict.html">Words</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <h1 class="text-center">Quiz App</h1>
+    <!-- <div class="main w-100 bg-warning pt-3">
+          <p class="text-center">You will have 10 quiestions to answer.</p>
+          <p class="text-center">The questions are selected from the most frequently used words</p>
+        <div class="col-md-4 text-center">
+          <button class="btn btn-primary">Start</button>
+        </div>
+      </div>
+    </div> -->
+    <div id="quiz_desc" class="quiz_desc">
+    <h5 class="text-center">You will have 10 random questions from 1000 most frequently used Finnish words!</h5>
+    <h5 class="text-center">Enjoy your Quiz!</h5>
+    </div>
+    <div id="start_box" class="start_box text-center m-5">
+      <button id="start_btn" class="btn btn-primary">
+        Let's Start The Quiz!
+      </button>
+    </div>
+    <div id="quiz_box" class="quiz_box">
+      <div id="counter" class="counter text-center mt-4">
+
+      </div>
+      <div>
+        <h3 id="question_word" class="text-center mt-4">
+
+        </h3>
+      </div>
+      <div class="choises_box text-center">
+        <button class="btn btn-outline-primary choices mt-3"></button>
+        <button class="btn btn-outline-primary choices mt-3"></button>
+        <button class="btn btn-outline-primary choices mt-3"></button>
+        <button class="btn btn-outline-primary choices mt-3"></button>
+      </div>
+        <div id="correct" class="correct alert alert-success m-3" role="alert">
+          <strong>Well done!</strong> correct!
+        </div>
+        <div id="incorrect" class="incorrect alert alert-danger m-3" role="alert">
+          <strong>Oh snap!</strong> incorrect...
+        </div>
+      </div>
+
 
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+</body>
+
 </html>

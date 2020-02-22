@@ -1,0 +1,41 @@
+#page_top{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.main{
+  width: 200px;
+  height: 500px;
+  margin:0 auto;
+  height: 600px;
+}
+
+.quiz_box{
+  border: 1px solid black;
+  width: auto;
+  height: 400px;
+  display: none;
+}
+
+.choices{
+  width: 80%;
+}
+
+.incorrect{
+  display: none;
+}
+
+.correct{
+  display: none;
+}
+
+.quiz_box{
+  background-color: rgba(117, 168, 250, 0.3);
+}
+
+.quiz_desc{
+  height: auto;
+  width: auto;
+  background-color: rgba(117, 168, 250, 0.3);
+}

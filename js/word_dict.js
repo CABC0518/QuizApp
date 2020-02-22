@@ -1,4 +1,5 @@
 
+
 for (let i = 1; i < words_list.length -1; i++) {
     let tr = document.createElement('tr');
 
@@ -23,14 +24,40 @@ for (let i = 1; i < words_list.length -1; i++) {
 
     let tbody = document.getElementById("words_list")
     tbody.appendChild(tr)
-    
+
 }
 
-
+// event handler for Word Search Box
 document.getElementById('search').addEventListener('change', ()=>{
-    selected_word = document.getElementById('search').value;
-    console.log(selected_word)
-    let filtered_word = words_list.filter(d => d.eng_word == selected_word)
-    console.log(filtered_word)
-    document.getElementById('search_result').innerHTML = filtered_word[0].fin_word
+    removeClassName('table-info')
+    let tds = document.getElementsByTagName("td");
+    search_word = document.getElementById('search').value.toLowerCase()
+    let word_match = "";
+    for (let i = 0; i < tds.length; i++) {
+        const element = tds[i];
+        if(search_word == tds[i].innerText){
+            word_match = tds[i]
+        }
+    }
+    // if word exsits in the page
+    if(word_match !== ""){
+        window.scrollTo(0, word_match.offsetTop);
+        word_match.parentNode.className += "table-info"
+    }
+    // when match word is NOT found
+    else{
+        console.log("no match")
+    }
+})
+
+
+function removeClassName(className){
+    let cls = document.getElementsByClassName(className);
+    for(cl of cls){
+        cl.classList.remove(className);
+    }
+}
+
+document.getElementById('page_top').addEventListener('click', ()=>{
+    window.scrollTo(0,0);
 })
